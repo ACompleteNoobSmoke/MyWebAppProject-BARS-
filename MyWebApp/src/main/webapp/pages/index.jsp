@@ -95,7 +95,7 @@
         <div class="col-12 narrow text-center">
             <h1>About Us</h1>
             <p class="lead">OH NO! You try to login and play with your friends and realized you have been banned. You think back "Was it that time I cursed out that noob?", "Was it that time I used an aimbot to get Nuke on Skidrow?" or "Blasphemy! This has to be a mistake".
-                Well no matter we can help you recover your account so you can go back in and enjoy the virtual community once again. All you need to do is fill out a form, and wait for admin and The BasedGod to determine your fate. <br>We Got B.A.R.S.</p>
+                Well no matter we can help you recover your account so you can go back in and enjoy the virtual community once again. All you need to do is fill out a form, and wait for The Admins and The BasedGod to determine your fate. <br>We Got B.A.R.S.</p>
         </div>
 
     </div>
@@ -119,18 +119,19 @@
                     </div>
 
                 </div>
-                <div class="col-sm-4">
+                 <div class="col-sm-4">
                     <div class="portfolio">
-                        <a href="https://github.com/ACompleteNoobSmoke" target="_blank">
-                            <img src="../Images/GithubLogo.png" alt="Github Logo"></a>
+                        
                     </div>
                 </div>
+                
                 <div class="col-sm-4">
                     <div class="portfolio">
                         <a href="https://stackoverflow.com/users/9561309/acompletenoobsmoke?tab=profile" target="_blank">
                             <img src="../Images/StackOverflowLogo.jpg" alt="StackOverflow Logo"></a>
                     </div>
                 </div>
+                 
 
 
 
