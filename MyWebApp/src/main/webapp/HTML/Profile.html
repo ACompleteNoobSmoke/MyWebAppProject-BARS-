@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Profile</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../CSS/pp.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <header class="heading" style="padding-top: 22px;margin-left: 300px;">
+            <h5><b><i class = "fa-fa-dashboard"></i>My Dashboard</b></h5>
+        </header>
+        <div class="row profile">
+            <div class="col-md-3">
+                <div class="profil-sidebar">
+                    <div class="profile-user-pic">
+                        <img src="../Images/ProfPic.jpg" alt="" class="img-responsive img-circle">
+
+                    </div>
+                    <div class="profile-user-title" id= "content">
+                        <div class="profile-user-name" id="title">
+                            <script>
+                                
+                            </script>
+                        </div>
+                        <div class="profile-user-job" id="gamerid">
+                            <script>
+                                document.getElementById("gamerid").innerHTML = id;
+                            </script>
+                        </div>
+                        <div class="profile-user-job" id="console">
+                            <script>
+                                document.getElementById("console").innerHTML = localStorage.getItem("console");
+                            </script>
+                        </div>
+
+                    </div>
+                    <div class="profile-user-buttons">
+                        <button class="btn btn-danger btn-sm" onclick="messagebox()">Message</button>
+
+                    </div>
+                    <div class="profile-use-menu">
+                        <ul class="nav">
+                            <li class="active"><a href=""><i class="glyphicon glyphicon-home"></i> Overview</a></li>
+                            <li><a href=""><i class="glyphicon glyphicon-user"></i> Account Status</a></li>
+                            <li><a href=""><i class="glyphicon glyphicon-ok"></i> Tasks</a></li>
+                            <li><a href="./index.html"><i class="glyphicon glyphicon-off"></i> Sign Out</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-9">
+                <table class="table table-striped" id="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <textarea name="" id="message" cols="110" rows="10"></textarea><br>
+                <button class="btn btn-danger btn-sm" id="sendbutton">Send</button>
+
+                <script>
+                    function messagebox() {
+                        var x = document.getElementById("message");
+                        var y = document.getElementById("sendbutton");
+                        var z = document.getElementById("table");
+                        if (x.style.visibility === "hidden") {
+                            x.style.visibility = "visible";
+                            y.style.visibility = "visible";
+                            z.style.visibility = "hidden";
+                        } else {
+                            x.style.visibility = "hidden";
+                            y.style.visibility = "hidden";
+                            z.style.visibility = "visible";
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+
+    </div>
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+        function get(url, "title") {
+            let divvy = document.getElementById("title");
+            let xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status == 200) {
+                    let data = JSON.parse(xhr.responseText);
+
+					for(let i = 0; i < data.length; i++){
+					var first =	data[i];
+					let last =	data[i];
+					let cons =	data[i];
+					let id =	data[i];
+					}
+					divvy.innerHTML = first;
+                  
+                }
+            }
+            xhr.open("GET", url);
+            xhr.send();
+        }
+
+
+
+        window.onload = function() {
+
+            this.get("/DemoApplicationWebsite/BARSApi/Profile", "content")
+        }
+    </script>
+</body>
+
+</html>
