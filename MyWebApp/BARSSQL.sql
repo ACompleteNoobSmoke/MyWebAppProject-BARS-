@@ -33,7 +33,7 @@ create table `admintable`(
 insert into AdminTable values("Alaa", "Alaa", false, "Admin");
 insert into AdminTable values("Wayne", "Wayne", false, "Admin");
 insert into AdminTable values("THEBASEDGOD", "LilB", false, "Admin");
-select * from AdminTable where AdminName = 'Alaa' And Password = 'Alaa';
+
 select * from AdminTable;
 truncate table Admin;
 drop table AdminTable;
